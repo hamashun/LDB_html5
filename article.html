@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title><$BlogTitle ESCAPE$> : <$ArticleTitle ESCAPE$></title>
+<link rel="stylesheet" href="http://parts.blog.livedoor.jp/css/template.css" />
+<link rel="stylesheet" href="<$CSSUrl$>" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<$RSSUrl$>" />
+<link rel="alternate" type="application/atom+xml" title="Atom" href="<$AtomUrl$>" />
+<IfFoafUrl><link rel="meta" type="application/rdf+xml" title="FOAF" href="<$FoafUrl$>" /></IfFoafUrl>
+<link rel="alternate" media="handheld" type="application/xhtml+xml" href="<$ArticleMobilePermalink$>" />
+<IfFoafUrl><link rel="meta" type="application/rdf+xml" title="FOAF" href="<$FoafUrl$>" /></IfFoafUrl>
+<script src="<$MiscJsUrl$>"></script>
+<script src="http://clip.livedoor.com/js/utils.js"></script>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body id="article-<$ArticleId$>" class="article article-<$ArticleId$>">
+<$BlogHeader$>
+
+<header id="siteHeader">
+  <hgroup>
+  <h1><a href="<$BlogUrl$>" title="<$BlogTitle ESCAPE$> トップへ"><$BlogTitle ESCAPE$></a></h1>
+  <h2><$BlogDescription$></h2>
+  </hgroup>
+</header>
+
+
+
+<article class="contents">
+
+<SetVar ArticlePagerType>2</SetVar><SetVar UseTitlesForPager>1</SetVar><$ArticlePager$>
+
+<!-- google_ad_section_start -->
+  <header>
+    <h1><a href="<$ArticlePermalink$>" title="個別記事ページへ" rel="bookmark"><$ArticleTitle ESCAPE$></a><IfArticleRating><span class="rating"><$ArticleRatingIcon$></span></IfArticleRating></h1>
+    <time datetime="<$ArticleDateISO8601$>" pubdate="pubdate"><$ArticleDate$><$ArticleTime$></time>
+    <dl class="category"><dt>Category</dt><IfArticleCategory1><dd class="articleCategory"><a href="<$ArticleCategory1Url$>" title="カテゴリアーカイブへ"><$ArticleCategory1$></a></dd></IfArticleCategory1><IfArticleCategory2><dd class="articleCategorySecond"><a href="<$ArticleCategory2Url$>" title="カテゴリアーカイブへ"><$ArticleCategory2$></a></dd></IfArticleCategory2></dl>
+    <dl class="bookmark">
+    <dt>Bookmark</dt>
+    <dd class="livedoorToolbox"><$ArticleToolBox$></dd>
+    </dl>
+  </header>
+
+  <div class="entryBody">
+  <$CommonTheme$>
+  <$ArticleBody$>
+  <IfArticleBodyMore><div id="more" class="more"><$ArticleBodyMore$></div></IfArticleBodyMore>
+  <$RelatedArticles$>
+  </div>
+<!-- /google_ad_section -->
+
+  <footer>
+  <$ArticleTagsList$>
+  <dl class="feedback">
+    <dt>Feedback</dt>
+    <dd class="author"><a href="<$ArticleAuthorProfileUrl$>" class="url"><img src="<$ArticleAuthorIconUrl$>" width="16" height="16" alt="" /><span class="nickname fn"><$ArticleAuthor$></span></a></dd>
+    <IfArticleAllowComment><dd class="articleCommentCount"><a href="<$ArticlePermalink$>#comments" title="コメント一覧へ">Comment(<$ArticleCommentCount$>)</a></dd></IfArticleAllowComment>
+    <IfArticleAllowPing><dd class="articleTrackbackCount"><a href="<$ArticlePermalink$>#trackbacks" title="トラックバック一覧へ">Trackback(<$ArticlePingCount$>)</a></dd></IfArticleAllowPing>
+  </dl>
+  </footer>
+
+
+
+  <!-- ..... Options ..... -->
+  <aside id="articleOptions">
+  <h1>Feedback area</h1>
+  
+  <!-- trackback form -->
+  <section class="articleOption" id="trackbackForm">
+  <h2>Trackback URL</h2>
+  <ul><li class="trackbackFormUrl"><span><input type="text" value="<$ArticleTrackBackUrl$>" /></span></li><li class="trackbackFormSubmit"><span><input type="button" value="クイック" onclick="quickTrackBack('<$ArticlePermalink$>'); return false;" /></span></li></ul>
+  </section>
+  <!-- /trackback form -->
+  
+  <!-- trackback list -->
+  <IfArticlePingCount>
+  <section class="articleOption" id="trackbacks">
+    <h2>Trackback list</h2>
+    <ol>
+    <!-- TrackBacksLoop Start -->
+    <TrackBacksLoop>
+    <li class="commentSet">
+      <h2 class="pingTitle"><$TrackBackNumber$>.
+      <a href="<$PingBlogUrl$>"><$PingTitle$></a></h2>
+      <ul class="pingInfo">
+        <li class="pingBlogName">[<span><$PingBlogName$></span>]</li>
+        <li class="pingDate"><$PingDateTime$></li>
+        <li class="pingExcerpt"><IfTrackBackRating><$TrackBackRatingIcon$></IfTrackBackRating><$PingExcerpt$></li>
+      </ul>
+    </li>
+    </TrackBacksLoop>
+    <!-- TrackBacksLoop End -->
+    </ol>
+  </section>
+  </IfArticlePingCount>
+  <!-- /trackback list -->
+  
+  <!-- comment list -->
+  <IfArticleCommentCount>
+  <section class="articleOption" id="comments">
+    <h2>Comment list</h2>
+    <ol>
+    <!-- CommentsLoop Start -->
+    <CommentsLoop>
+    <li class="commentSet">
+      <ul class="commentInfo">
+        <li class="commentAuthor"><$CommentNumber$>.
+    <IfCommentUrl><a href="<$CommentUrl$>" class="commentUrl"><$CommentAuthor ESCAPE$></a><ElseIfCommentEmail><a href="mailto:<$CommentEmail ESCAPE$>" class="commentEmail"><$CommentAuthor ESCAPE$></a><Else><$CommentAuthor ESCAPE$></IfCommentUrl></li>
+        <li class="commentDate"><$CommentDateTime$></li>
+        <li class="commentBody"><IfCommentRating><$CommentRatingIcon$></IfCommentRating><$CommentBody$></li>
+      </ul>
+    </li>
+    </CommentsLoop>
+    <!-- CommentsLoop End -->
+    </ol>
+  </section>
+  </IfArticleCommentCount>
+  <!-- /comment list -->
+  
+  <!-- comment form -->
+  <IfArticleAllowComment>
+  <section class="articleOption" id="commentForm">
+    <h2>Comment post</h2>
+    <IfCommentNeedAuth>
+    <script>//<![CDATA
+      if (typeof(authorized_name) == "undefined") {
+        document.writeln('<scr'+'ipt type="text/javascript" src="<$BlogAuthJsUrl$>"></scr'+'ipt>');
+      }
+    //]]>
+    </script>
+    <script>//<![CDATA
+      document.writeln('<div class="commentAuthAnnouncement">');
+      if(authorized_name) {
+        document.write('<p class="authorized"><span class=\"authorizedName\">' + authorized_name + 'さん</span><a href=\"" _ article.logout_url _ "\">ログアウト</a></p></div>');
+      }
+      else {
+        document.write('<p>このBlogにコメントするには<a href=\"" _ article.login_url _ "\">ログイン</a>が必要です。</p></div><style type="text/css"><!-- #comment-form-body { display: none; } --></style>');
+      }
+    //]]>
+    </script>
+    </IfCommentNeedAuth>
+    <form action="<$ArticleCommentUrl$>" method="post" name="comment_form" onsubmit="javacript:setCommentAuthor(this); return submitOnce(this.button);">
+    <table>
+    <tbody>
+    <tr class="inputAuther">
+      <th><label for="author">Name</label></th>
+      <td><IfCommentNeedAuth>
+        <script>//<![CDATA
+          if(authorized_name)
+            document.write(authorized_name);
+          else
+            document.write('<input id="author" name="author" />');
+        //]]>
+        </script><Else><input id="author" name="author" /></IfCommentNeedAuth>
+      </td>
+    </tr>
+    <tr class="inputEmail">
+      <th><label for="email">Mail</label></th>
+      <td><input id="email" name="email" /></td>
+    </tr>
+    <tr class="inputUrl">
+      <th><label for="url">URL</label></th>
+      <td><input id="url" name="url" /></td>
+    </tr>
+    <tr class="inputEtc">
+      <th> </th>
+      <td>
+      <label class="inputMemorize" for="bake">情報を記憶</label><input id="bake" type="checkbox" name="cookie" />
+      </td>
+    </tr>
+    <tr class="inputCommentBody">
+      <th>&nbsp;</th>
+      <td>
+        <div class="textareaOuter">
+          <textarea id="text" name="body"></textarea>
+        </div>
+      </td>
+    </tr>
+    <tr class="submit">
+      <th> </th>
+      <td><input type="submit" value=" 投稿する " class="button" name="button" /></td>
+    </tr>
+    </tbody>
+    </table>
+    </form>
+  </section>
+  <script>//<![CDATA
+    loadCommentAuthor(document.comment_form);
+  //]]>
+  </script>
+  </IfArticleAllowComment>
+  <!-- /comment form -->
+  
+  </aside><!-- articleOption End -->
+
+  <SetVar ArticlePagerType>2</SetVar><SetVar UseTitlesForPager>1</SetVar><$ArticlePager$>
+
+</article><!-- /contents -->
+
+
+
+<aside class="plugin">
+  <h1 class="asideTitle">Plugin</h1>
+  <$PluginList_A$>
+  <$PluginList_B$>
+  <$LDServices$>
+</aside>
+
+
+
+<footer id="siteFooter">
+  <p>Powered by <a href="http://blogger-alliance.com/">Blogger Alliance</a></p>
+</footer>
+
+</body>
+</html>

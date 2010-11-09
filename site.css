@@ -1,0 +1,565 @@
+@charset "UTF-8";
+
+/* =======================================
+    livedoor blog HTML5 template
+======================================= */
+
+/* =======================================
+  TOC
+  =1 reset
+  =2 common
+  =3 unsorted
+======================================= */
+
+
+
+/* =======================================
+  =1 reset
+======================================= */
+
+/* reset */
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, q, pre, table, caption, colgroup, col, tbody, thead, tfoot, tr, th, td, ul, ol, li, dl, dt, dd, form, fieldset, legend, label, span, a, img, em, ins, del, cite, abbr, sup, sub, dfn, code, var, samp, kbd, object, script, noscript, style, iframe, embed, param, map, area,
+menu, hr, address, small, strong, i, b,
+article, aside, figure, footer, header, hgroup, nav, section, figcaption, time, video, audio, mark, ruby, rt, rp, bdo, source, canvas, details, summary, command,
+datalist, keygen, output, progress, meter {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+address, article, aside, figure, figcaption, footer, header, hgroup, hr, legend, menu, nav,  section, summary {
+	display: block;
+}
+
+li {
+	list-style-type: none;
+}
+
+a img {
+	border: none;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+[hidden] {
+	display: none;
+}
+
+
+
+
+
+/* standard */
+* {
+	word-wrap: break-word;
+}
+
+body {
+	line-height: 1.5;
+	letter-spacing: 0.03em;
+	background: #fff;
+	color: #333;
+}
+
+a:link {}
+a:visited {}
+a:hover {}
+a:active {}
+
+label {
+	cursor: pointer;
+}
+
+mark {
+	background-color: #ff9;
+	color: #000;
+}
+
+
+
+
+
+/* =======================================
+  =2 common
+======================================= */
+
+
+
+/* clearfix
+======================================= */
+.hoge {
+	/zoom: 1;
+}
+
+.hoge:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+
+
+/* un-displaying
+======================================= */
+body#index section.contents h1.pageTitle,
+aside.plugin h1.asideTitle,
+article.entry .feedback dt,
+article.entry .category dt,
+article.entry .bookmark dt {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+
+
+/* system img hover
+======================================= */
+article.entry .author a:hover img,
+#ld-services a:hover img {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+
+
+/* article detail
+======================================= */
+article time,
+article .category,
+article .bookmark,
+article .bookmark dd,
+.contents footer .feedback dd,
+.contents header .category dd {
+	display: inline;
+}
+
+article time,
+article .category {
+	margin-right: 10px;
+}
+
+
+.contents header .category dd {
+	margin-right: 0.3em;
+}
+
+.contents footer .author a {
+	position: relative;
+	padding-left: 20px;
+}
+
+.contents footer .author img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+
+/* aside
+======================================= */
+aside .sidetitlebody {
+	font-weight: bold;
+}
+
+
+/* calendar
+================================== */
+div.calendarheadbody {}
+div.calendarheadbody div.calendarhead {
+	padding: 0 20px 10px;
+	text-align: center;
+/*	color: #666;*/
+	font-weight: bold;
+}
+
+div#sub div.calendarheadbody div.calendarhead a,
+div#extra div.calendarheadbody div.calendarhead a {
+/*	color: #666;*/
+}
+
+div.caltop,
+div.calbottom {
+	display: none;
+}
+
+div.calbody {}
+
+table.caltbl {
+	width: 180px;
+	margin: 0 auto;
+	border: 0;
+}
+div.calbody table.calendartable {}
+td.caltblwkbg {}
+td.calendarwd {}
+td table.caltblwk td {
+	font-weight: bold;
+	height: 20px;
+}
+
+td table.caltblwk td.weekday {}
+td table.caltblwk td.sat {
+/*	color: #0066FF;*/
+}
+
+td table.caltblwk td.sun {
+/*	color: #CC0000;*/
+}
+td table.caltblwk td span.calendarweek {}
+td.caltbldaybg {}
+td table.caltblday {
+	margin: 0 auto 25px;
+	width: 180px;
+/*	color: #8d8d8d;*/
+}
+td table.caltblday td {
+	width: 20px;
+	height: 24px;
+	padding: 0;
+	text-align: center;
+}
+td table.caltblday td.caloff {}
+td table.caltblday td.calendard {}
+td table.caltblday td.calon {}
+td table.caltblday td.calon a {}
+td table.caltblday td.calendardbg {}
+td table.caltblday td span.calendar {}
+
+
+
+
+
+
+/* pager
+======================================= */
+.article-pager li:first-child {
+	margin-right: 15px;
+	padding-right: 15px;
+	border-right: solid 1px #666;
+}
+
+
+
+
+/* footer
+======================================= */
+footer#siteFooter {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======================================
+  =3 unsorted
+======================================= */
+a:link {
+  color: #53a9ff;
+}
+a:visited {
+  color: #c663c6;
+}
+a:hover {
+  text-decoration: none;
+}
+
+
+#siteHeader h1 a {
+  color: #333;
+	font-size: 450%;
+	text-shadow: 5px 5px 0px #eee, 7px 7px 0px #707070;
+	text-decoration: none;
+	line-height: 1;
+}
+
+
+
+body {
+  color: #333;
+}
+
+
+
+/* detail
+======================================= */
+body {
+	background: #c2d1c9;
+	background: #e0e0e0;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+table#header {
+	background: #ccc;
+}
+
+header#siteHeader {
+	width: 87%;
+	height: 250px;
+	margin: 0 auto;
+	border-right: solid 1px #1f3e35;
+	border-left: solid 1px #1f3e35;
+	text-align: center;
+	background: #fdfdfd;
+}
+
+	header#siteHeader h1 {
+		margin-bottom: 10px;
+		padding-top: 10px;
+		font-size: 30px;
+	}
+
+
+section.contents,
+article.contents {
+	width: 87%;
+	margin: 0 auto;
+	border-right: solid 1px #1f3e35;
+	border-left: solid 1px #1f3e35;
+	background: #fdfdfd;
+}
+
+article header {
+	margin-bottom: 15px;
+	padding: 3px 10px 5px;
+	border: double 3px #999;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6));
+	-moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+	article h1 {
+		margin-bottom: 2px;
+		font-size: 25px;
+	}
+
+		article h1 a {
+			text-shadow: 2px 2px 1px rgba(83, 169, 255, 0.2);
+		}
+
+
+article footer {
+	border: solid 1px #999;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
+}
+
+article footer .feedback {
+	padding: 5px;
+	border: solid 1px #fff;
+}
+
+section.contents article.entry {
+	margin-bottom: 50px;
+	padding: 0 35px;
+}
+
+section.contents article.entry:last-child {
+	margin-bottom: 0;
+}
+
+.entryBody {
+	margin: 10px;
+}
+
+.entryBody h2 {
+  font-size: 20px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.entryBody h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.entryBody p {
+  margin-bottom: 15px;
+}
+
+.entryBody section {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+
+.entryBody img:not([width="64"]) {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 7px;
+	-moz-box-shadow: 0 0 5px 2px grey;
+	-webkit-box-shadow: 0 0 5px 2px grey;
+	box-shadow: 0 0 5px 2px grey;
+	background: #fff;
+}
+
+.entryBody .amazon {
+	margin: 20px;
+}
+.entryBody .amazon img[width="64"] {
+	vertical-align: middle;
+}
+
+
+.entryBody .amazon img.pict {
+	float: left;
+	margin-right: 10px;
+}
+
+
+.entryBody li {
+	margin: 5px 0 5px 25px;
+}
+
+.entryBody dt {
+	font-weight: bold;
+}
+
+.entryBody dd {
+	padding: 0 0 5px 1em;
+}
+
+
+.entryBody pre,
+.entryBody code,
+.entryBody samp {
+	line-height: 1.3;
+	background: #333;
+	color: #fff;
+}
+
+.entryBody pre {
+	margin: 15px 0;
+	padding: 10px;
+	overflow: auto;
+	-moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.entryBody blockquote {
+	margin: 30px 30px 0 30px;
+	padding: 10px;
+	border: solid 5px #ccc;
+}
+
+.entryBody cite {
+	display: block;
+	margin: 0 30px 30px;
+}
+
+.entryBody mark {
+	background: #333;
+	color: #ff6;
+}
+
+
+.related-articles {
+  margin: 30px;
+}
+
+
+
+#commentForm table {
+	width: 100%;
+}
+
+#commentForm input:not([type="checkbox"]) {
+	width: 50%;
+}
+	textarea {
+	width: 80%;
+	height: 100px;
+}
+
+
+
+aside.plugin {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 87%;
+	margin: 0 auto;
+	padding: 50px 35px;
+	overflow: hidden;
+	xdisplay: table;
+	border-right: solid 1px #1f3e35;
+	border-left: solid 1px #1f3e35;
+	background: #fdfdfd;
+	text-align: center;
+}
+
+aside .plugin,
+aside #ld-services,
+aside.plugin .sidewrapper {
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	vertical-align: top;
+	width: 22%;
+	margin-bottom: 30px;
+	padding-right: 1%;
+	text-align: left;
+}
+
+
+aside.plugin .plugin:nth-child(2),
+aside.plugin .sidewrapper:nth-child(2) {
+	/*padding-left: 35px;*/
+}
+aside.plugin .plugin:last-child,
+aside.plugin .sidewrapper:last-child {
+	padding-right: 35px;
+}
+
+footer#siteFooter {
+	clear: both;
+	width: 87%;
+	margin: 0 auto;
+	padding: 15px 0;
+	border-right: solid 1px #1f3e35;
+	border-left: solid 1px #1f3e35;
+	background: #fdfdfd;
+}
+
+
+
+
+
+
+
+body.article article.contents header,
+body.article article.contents .entryBody,
+body.article article.contents footer,
+body.article article.contents #articleOptions,
+body.article article.contents .pager {
+	padding: 0 35px;
+}
+
+
+
+
+
+
+
